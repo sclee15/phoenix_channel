@@ -78,7 +78,7 @@ class OnChannel{
   Map<String, Map<int, StreamController<Map>>> registers;
   
   OnChannel(this.jsObject, this.event, {this.key, this.registers, this.rootOnChannels}){
-    var nextWrapper = allowInterop( (a, [b]){
+    var nextWrapper = allowInterop( (a, [b, c]){
       var darto = dartify(a);
       controller.add( darto );
     });
