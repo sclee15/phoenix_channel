@@ -5,7 +5,7 @@ homepage: https://github.com/sclee15/phoenix_channel
 author: S.-C. Lee <consoledir@outlook.com>
 
 environment:
-  sdk: '>=1.20.1 <2.0.0'
+  sdk: '>=2.0.0-dev <3.0.0'
 
 dependencies:
-  js: ^0.6.1
+  js: any

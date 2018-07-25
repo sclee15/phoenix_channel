@@ -28,13 +28,13 @@ dynamic jsify(Object dartObject) {
     return dartObject;
   }
 
-  Object json;
+  Object jsonO;
   try {
-    json = JSON.encode(dartObject, toEncodable: _noCustomEncodable);
+    jsonO = json.encode(dartObject, toEncodable: _noCustomEncodable);
   } on JsonUnsupportedObjectError {
     throw new ArgumentError("Only basic JS types are supported");
   }
-  return parse(json);
+  return parse(jsonO);
 }
 
 _noCustomEncodable(value) =>
@@ -45,6 +45,6 @@ dynamic dartify(Object jsObject) {
     return jsObject;
   }
 
-  var json = stringify(jsObject);
-  return JSON.decode(json);
+  var jsonO = stringify(jsObject);
+  return json.decode(jsonO);
 }
